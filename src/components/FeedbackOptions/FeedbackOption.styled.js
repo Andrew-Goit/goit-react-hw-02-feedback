@@ -6,13 +6,14 @@ export const FeedbackBtn = styled.button`
   font-weight: 600;
   margin-left: 20px;
   border-radius: 5px;
-  border: none;
-  background-color: #ddd;
+  border: 1px solid grey;
+  background-color: #fff;
   color: #333;
   cursor: pointer;
-  transition: background-color 300ms linear, color 300ms linear;
+  transition: background-color 200ms linear, color 200ms linear;
+
   &:hover {
-    background-color: #4b98f5;
+    background-color: #4b98f9;
     color: #eee;
   }
 `;

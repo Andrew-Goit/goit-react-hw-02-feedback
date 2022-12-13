@@ -1,24 +1,25 @@
 import PropTypes from 'prop-types';
+import {Notification} from 'components/Notification/Notification';
+import { StatWraper, StatItem } from './Statistics.styled';
+// 
 
 export const Statistics = props => {
   const { good, neutral, bad, total, positivePercentage } = props;
-  
-  if (good + neutral + bad === 0)
-    return <p>"There is no feedback"</p>;
+  if (good + neutral + bad === 0) {
+    // return <p>There is no feedback</p>;
+    return <Notification message="There is no feedback" />;
+  } else {
   return (
-    <>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {total}</p>
-      <p>
-        Positive feedback:
-        {positivePercentage}
-      </p>
-    </>
+    <StatWraper>
+      <StatItem>Good: {good}</StatItem>
+      <StatItem>Neutral: {neutral}</StatItem>
+      <StatItem>Bad: {bad}</StatItem>
+      <StatItem>Total: {total}</StatItem>
+      <StatItem>Positive feedback:{positivePercentage}</StatItem>
+    </StatWraper>
   );
+}
 };
-
 
 Statistics.propTypes = {
   props: PropTypes.shape({

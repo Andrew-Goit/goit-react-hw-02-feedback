@@ -1,12 +1,12 @@
-import { WidgetSection, Title } from './Section.styled';
+import { ComponentSection, Title } from './Section.styled';
 
 export const Section = ({ title, children }) => {
   return (
-    <WidgetSection>
+    <ComponentSection>
       <Title>{title}</Title>
       {children}
-    </WidgetSection>
+    </ComponentSection>
   );
 };
 
-// export default Section;
+

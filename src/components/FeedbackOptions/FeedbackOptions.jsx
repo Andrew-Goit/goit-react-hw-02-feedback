@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import { FeedbackBtn } from './FeedbackOption.styled';
 
 export const FeedbackOptions = props => {
-  const { options, onLiveFeedback } = props;
+  const { options, onLeaveFeedback } = props;
   return (
-    <FeedbackBtn name={options} type="button" onClick={onLiveFeedback}>
+    <FeedbackBtn name={options} type="button" onClick={onLeaveFeedback}>
       {options}
     </FeedbackBtn>
   );
@@ -13,6 +13,8 @@ export const FeedbackOptions = props => {
 FeedbackOptions.propTypes = {
   props: PropTypes.shape({
     options: PropTypes.string.isRequired,
-    onLiveFeedback: PropTypes.func.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
   }),
 };
+
+// export default FeedbackOptions;

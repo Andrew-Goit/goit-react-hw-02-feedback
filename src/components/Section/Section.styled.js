@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const WidgetSection = styled.section`
+export const ComponentSection = styled.section`
   width: 500px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 30px;
+  text-align: center;
 `;
 
 export const Title = styled.h2`
